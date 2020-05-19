@@ -5,16 +5,20 @@ import BodyText from '../components/BodyText';
 import Title from '../components/Title';
 
 const GameOver = (props) => {
-  let gameOverPicture = require('../assets/original.png');
+  // let gameOverPicture = require('../assets/original.png');
 
   return (
     <View style={styles.screen}>
       <Title>The Game is Over!</Title>
       <View style={styles.imageContainer}>
         <Image
+          fadeDuration={1000}
           resizeMode='cover'
           style={styles.image}
-          source={gameOverPicture}
+          // source={gameOverPicture}
+          source={{
+            uri: 'https://ichef.bbci.co.uk/images/ic/1200x675/p01qtgbf.jpg',
+          }}
           resizeMode='cover'
         />
       </View>
