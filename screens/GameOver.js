@@ -10,7 +10,14 @@ const GameOver = (props) => {
   return (
     <View style={styles.screen}>
       <Title>The Game is Over!</Title>
-      <Image resizeMode='cover' style={styles.image} source={gameOverPicture} />
+      <View style={styles.imageContainer}>
+        <Image
+          resizeMode='cover'
+          style={styles.image}
+          source={gameOverPicture}
+          resizeMode='cover'
+        />
+      </View>
       <BodyText>Number of rounds: {props.roundsNumber}</BodyText>
       <BodyText>Number was: {props.userNumber}</BodyText>
       <Button title='NEW GAME' onPress={props.onRestart}></Button>
@@ -25,8 +32,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: '80%',
+    width: '100%',
+    height: '100%',
+  },
+  imageContainer: {
+    width: 300,
     height: 300,
+    borderRadius: 150,
+    borderWidth: 3,
+    borderColor: 'black',
+    overflow: 'hidden',
+    marginVertical: 30,
   },
 });
 
