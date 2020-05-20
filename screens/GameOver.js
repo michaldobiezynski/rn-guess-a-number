@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Button, Image } from 'react-native';
 import BodyText from '../components/BodyText';
 import Title from '../components/Title';
 import Colors from '../constants/colors';
+import MainButton from '../components/MainButton';
 
 const GameOver = (props) => {
   let gameOverPicture = require('../assets/original.png');
@@ -32,7 +33,7 @@ const GameOver = (props) => {
         </BodyText>
       </View>
 
-      <Button title='NEW GAME' onPress={props.onRestart}></Button>
+      <MainButton onPress={props.onRestart}>NEW GAME</MainButton>
     </View>
   );
 };
